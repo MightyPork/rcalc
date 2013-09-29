@@ -1,4 +1,4 @@
-package net.mightypork.semestralka;
+package net.mightypork.calculator;
 
 
 import java.io.File;
@@ -17,7 +17,7 @@ import net.mightypork.rcalc.numbers.Fraction;
  */
 public class CalculatorInteractive implements Runnable {
 
-	/** Rcalc Session used by the calculator */
+	/** RCalc Session used by the calculator */
 	private RCalcSession session = new RCalcSession();
 
 	/** Show results as fractions */
@@ -42,17 +42,18 @@ public class CalculatorInteractive implements Runnable {
 		 + "Commands:\n"
 		 + "\thelp - show this help\n"
 		 + "\texit - quit the calculator\n"
-		 + "\tdebug - toggle debug mode (default off)\n"
 		 + "\tdecimal - toggle decimal/fractional output\n"
 		 + "\tvars - print a list of variables\n"
+		 + "\tdebug - toggle debug mode (default off)\n"
+		 + "\tutest - perform RCalc unit tests\n"
 		 + "\tload filename - execute commands from a file\n"
 		 + "\t\t(Expressions from the file can use/change variables)\n"
 		 + "\n"
 		 + "Mathematical operations, syntax\n"
 		 + "\tSupported: + - * / % ^ ! ( )\n"
 		 + "\tMultiplication sign can be omitted where it makes sense.\n"
-		 + "\tAlong with fractions, decimal-point format works too.\n"
 		 + "\tUse 'a/b' syntax to express a fraction.\n"
+		 + "\tDecimal-point numbers are supported, too.\n"
 		 + "\n"
 		 + "Variables\n"
 		 + "\tAssign a variable:\n"
@@ -91,7 +92,7 @@ public class CalculatorInteractive implements Runnable {
 			while (!sc.hasNextLine()) {}
 
 			String expr = sc.nextLine().toLowerCase().trim();
-			
+
 			if (expr.equals("%")) { // repeat last expression
 				if (history.size() > 0) {
 					expr = history.get(history.size() - 1);
@@ -101,13 +102,20 @@ public class CalculatorInteractive implements Runnable {
 					continue;
 				}
 			}
-			
+
+
+			// can't use a switch on strings because of java 6 :(
+
 			if (expr.equals("exit")) { // quit
 				System.out.println("Exit.");
 				return;
 
 			} else if (expr.equals("help")) { // show help
 				System.out.println(helpMessage);
+
+			} else if (expr.equals("utest")) { // show help
+				Runnable r = new Tests();
+				r.run();
 
 			} else if (expr.equals("debug")) { // toggle debug mode
 

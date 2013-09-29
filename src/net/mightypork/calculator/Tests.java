@@ -1,4 +1,4 @@
-package net.mightypork.semestralka;
+package net.mightypork.calculator;
 
 
 import net.mightypork.rcalc.RCalc;
@@ -9,13 +9,15 @@ import net.mightypork.rcalc.RCalc;
  * 
  * @author Ondrej Hruska
  */
-public class Tests {
+public class Tests implements Runnable {
 
 	/**
 	 * Run the tests
 	 */
-	public static void run() {
+	@Override
+	public void run() {
 
+		System.out.println("--- RCalc Unit Tests ---");
 		RCalc rc = new RCalc();
 		rc.setDebug(true);
 
@@ -27,22 +29,18 @@ public class Tests {
 				"(1-1)(1--1)(1---1)(1----1)(1--+-+-+++--+-+1)(1--+-+-+-+-----1)(5*-1)", // minus, plus
 				"-(15/2)+(72*43-2)-(12+1)", // minus with parentheses
 				"+34-(--8+2*+13)", // + at beginning of scope
-				// misc
-				"23%(6/5)",
-				"53/(5-4-1)",
-				"100!",
-				"24/4/3",
-				"(10+1)(15-3)",
-				"13(55-3/12)^2",
-				"(1/2)^-2",
-				"13^(1/2)", // should fail
-				"(1/2)*(3/4)",
+				"1000!", // big factorial
+				"24/4/3", // chained division must go LTR
+				"5-4-1", // subtraction must go LTR
+				"5(10+1)(4!3)", // implicit multiplication
+				"(1/2)^-2", // inverting a fraction
 				"(1/2)/(3/4)", // compound fraction
+				"(1/2)*(3/4)", // fraction multiplication
 		};
 		//@formatter:on
 
 		for (String expr : testCases) {
-			System.out.println("\n\n###### test case begin ######");
+			System.out.println("\n\n# Test Case #");
 
 			try {
 				System.out.println("IN: " + expr);
@@ -51,6 +49,8 @@ public class Tests {
 				System.out.println("ERROR: " + e.getMessage());
 			}
 		}
+
+		System.out.println("--- Unit Tests End ---");
 
 	}
 }

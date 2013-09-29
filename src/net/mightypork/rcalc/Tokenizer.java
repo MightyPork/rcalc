@@ -1,7 +1,6 @@
 package net.mightypork.rcalc;
 
 
-import java.math.BigInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -109,11 +108,11 @@ public class Tokenizer implements IDebugable {
 		if (debug && deepDebug) System.out.println("\nNormalize sequences of '+' and '-'\n" + input);
 
 		// turn '-' to '+-' between numbers
-		input = input.replaceAll("(?<=[0-9)!])-(?=[0-9])", "+-");
+		input = input.replaceAll("(?<=[0-9)!])-(?=[0-9.])", "+-");
 		if (debug && deepDebug) System.out.println("\n'-' to '+-' between numbers\n" + input);
 
 		// convert '-' to '+-1*' in front of non-numbers
-		input = input.replaceAll("-(?=[^0-9])", "+-1*");
+		input = input.replaceAll("-(?=[^0-9.])", "+-1*");
 		if (debug && deepDebug) System.out.println("\n'-' to '+-1*' in front of non-numbers\n" + input);
 
 		// discard useless + signs

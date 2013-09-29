@@ -1,4 +1,4 @@
-package net.mightypork.semestralka;
+package net.mightypork.calculator;
 
 
 import java.io.File;
@@ -19,7 +19,7 @@ import net.mightypork.rcalc.numbers.Fraction;
  */
 public class CalculatorBatch implements Runnable {
 
-	/** Rcalc Session used by the calculator */
+	/** RCalc Session used by the calculator */
 	private RCalcSession session = new RCalcSession();
 
 	/** File to load the expressions from */

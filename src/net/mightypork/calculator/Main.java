@@ -1,4 +1,4 @@
-package net.mightypork.semestralka;
+package net.mightypork.calculator;
 
 
 import java.io.File;

@@ -94,16 +94,29 @@ public class Fraction implements IEvaluableToken {
 	}
 
 
+	/**
+	 * Create a fraction with numerator parsed from a string, and 1 as
+	 * denominator.
+	 * 
+	 * @param number numerator as string
+	 */
 	public Fraction(String number) {
-		if(number.contains(".")) {
+
+		if (number.matches("[.][0-9]+")) {
+			number = "0" + number;
+		}
+
+		if (number.matches("-[.][0-9]+")) {
+			number = "-0" + number.substring(1);
+		}
+
+		if (number.matches("-?[0-9]+[.][0-9]+")) {
 			String[] parts = number.split("[.]");
-			try{
-				if(parts.length != 2) throw new ParseError(""); // for the catch
-				this.numerator = new BigInteger(parts[0]+parts[1]);
+			try {
+				this.numerator = new BigInteger(parts[0] + parts[1]);
 				this.denominator = BigInteger.valueOf(10).pow(parts[1].length());
 				this.simplify_ip();
-			}catch(Exception e) {
-				e.printStackTrace();
+			} catch (Exception e) {
 				throw new ParseError("Invalid number format.");
 			}
 		} else {
@@ -270,13 +283,13 @@ public class Fraction implements IEvaluableToken {
 
 		return new Fraction(numerator.divide(gcd), denominator.divide(gcd));
 	}
-	
 
 
 	/**
 	 * Simplify the fraction (in place)
 	 */
 	private void simplify_ip() {
+
 		BigInteger gcd = numerator.gcd(denominator);
 
 		numerator = numerator.divide(gcd);
