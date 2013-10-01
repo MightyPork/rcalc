@@ -10,7 +10,7 @@ import net.mightypork.rcalc.operations.Operation;
  * 
  * @author Ondrej Hruska
  */
-public abstract class TokenUnaryOperatorRight implements IOperatorToken {
+public abstract class TokenUnaryOperatorRight extends TokenOperator {
 
 	/**
 	 * Convert to operation

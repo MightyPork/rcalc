@@ -76,7 +76,7 @@ public class RCalcSession implements IDebugable {
 
 		if (expression.length() == 0) return null; // no operation
 
-		expression.replace(":=", "="); // normalize assignment sign
+		expression = expression.replace(":=", "="); // normalize assignment sign
 
 		String assignedVariable = null;
 		String assignmentOperation = "";

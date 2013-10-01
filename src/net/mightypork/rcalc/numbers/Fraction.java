@@ -5,6 +5,7 @@ import java.math.BigInteger;
 
 import net.mightypork.rcalc.IEvaluableToken;
 import net.mightypork.rcalc.ParseError;
+import net.mightypork.rcalc.TokenList;
 
 
 /**
@@ -459,6 +460,12 @@ public class Fraction implements IEvaluableToken {
 		}
 
 		return new Fraction(result, BigInteger.ONE);
+	}
+
+
+	@Override
+	public TokenList wrapInTokenList() {
+		return new TokenList(this);
 	}
 
 }

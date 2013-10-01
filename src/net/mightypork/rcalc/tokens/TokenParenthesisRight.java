@@ -2,6 +2,7 @@ package net.mightypork.rcalc.tokens;
 
 
 import net.mightypork.rcalc.IToken;
+import net.mightypork.rcalc.TokenList;
 
 
 /**
@@ -17,4 +18,8 @@ public class TokenParenthesisRight implements IToken {
 		return ")";
 	}
 
+	@Override
+	public TokenList wrapInTokenList() {
+		throw new RuntimeException("Cannot wrap a parenthesis in a TokenList!");
+	}
 }

@@ -36,6 +36,15 @@ public class TokenList extends ArrayList<IToken> implements IToken {
 
 
 	/**
+	 * Create a tokenList with single item
+	 * @param token the item
+	 */
+	public TokenList(IToken token) {
+		add(token);
+	}
+
+
+	/**
 	 * Parse the token list.<br>
 	 * After running this method, the list is typically reduced to a single
 	 * token
@@ -121,29 +130,12 @@ public class TokenList extends ArrayList<IToken> implements IToken {
 
 				TokenBinaryOperator opToken = (TokenBinaryOperator) operatorToken;
 
-				// variables for tokenLists of the operands
-				TokenList leftTL, rightTL;
-
-				// get left operand
-				IToken leftArg = get(pos - 1);
-				if (leftArg instanceof TokenList) {
-					leftTL = (TokenList) leftArg;
-				} else {
-					leftTL = new TokenList(1);
-					leftTL.add(leftArg);
-				}
-
-				// get right operand
-				IToken rightArg = get(pos + 1);
-				if (rightArg instanceof TokenList) {
-					rightTL = (TokenList) rightArg;
-				} else {
-					rightTL = new TokenList(1);
-					rightTL.add(rightArg);
-				}
+				// get operands
+				TokenList leftArg = get(pos - 1).wrapInTokenList();
+				TokenList rightArg = get(pos + 1).wrapInTokenList();
 
 				// build an operation
-				Operation op = opToken.toOperation(leftTL, rightTL);
+				Operation op = opToken.toOperation(leftArg, rightArg);
 
 				// discard used tokens
 				subList(pos - 1, pos + 2).clear();
@@ -156,20 +148,11 @@ public class TokenList extends ArrayList<IToken> implements IToken {
 
 				TokenUnaryOperatorLeft opToken = (TokenUnaryOperatorLeft) operatorToken;
 
-				// variable for left operand
-				TokenList leftTL;
-
-				// get left operand (the only one)
-				IToken leftArg = get(pos - 1);
-				if (leftArg instanceof TokenList) {
-					leftTL = (TokenList) leftArg;
-				} else {
-					leftTL = new TokenList(1);
-					leftTL.add(leftArg);
-				}
+				// get operand
+				TokenList leftArg = get(pos - 1).wrapInTokenList();
 
 				// build an operation
-				Operation op = opToken.toOperation(leftTL);
+				Operation op = opToken.toOperation(leftArg);
 
 				// discard used tokens
 				subList(pos - 1, pos + 1).clear();
@@ -183,19 +166,10 @@ public class TokenList extends ArrayList<IToken> implements IToken {
 				TokenUnaryOperatorRight opToken = (TokenUnaryOperatorRight) operatorToken;
 
 				// variable for left operand
-				TokenList rightTL;
-
-				// get right operand (the only one)
-				IToken rightArg = get(pos + 1);
-				if (rightArg instanceof TokenList) {
-					rightTL = (TokenList) rightArg;
-				} else {
-					rightTL = new TokenList(1);
-					rightTL.add(rightArg);
-				}
+				TokenList rightArg = get(pos + 1).wrapInTokenList();
 
 				// build an operation
-				Operation op = opToken.toOperation(rightTL);
+				Operation op = opToken.toOperation(rightArg);
 
 				// discard used tokens
 				subList(pos, pos + 2).clear();
@@ -262,6 +236,12 @@ public class TokenList extends ArrayList<IToken> implements IToken {
 			add(left, insides.parse());
 		}
 
+	}
+
+
+	@Override
+	public TokenList wrapInTokenList() {
+		return this;
 	}
 
 
