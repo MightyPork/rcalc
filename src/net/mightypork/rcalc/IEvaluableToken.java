@@ -4,7 +4,7 @@ package net.mightypork.rcalc;
 /**
  * Evaluable token interface
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public interface IEvaluableToken extends IEvaluable, IToken {
 

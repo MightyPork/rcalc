@@ -11,7 +11,7 @@ import net.mightypork.rcalc.tokens.*;
 /**
  * A list of tokens which can be parsed into a single IEvaluable
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class TokenList extends ArrayList<IToken> implements IToken {
 

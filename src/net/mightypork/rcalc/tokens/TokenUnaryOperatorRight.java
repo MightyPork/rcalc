@@ -8,7 +8,7 @@ import net.mightypork.rcalc.operations.Operation;
 /**
  * Abstract operator token with one operand on right
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public abstract class TokenUnaryOperatorRight extends TokenOperator {
 

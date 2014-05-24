@@ -8,7 +8,7 @@ import net.mightypork.rcalc.numbers.Fraction;
 /**
  * Subtraction
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class OperationSubtract extends BinaryOperation {
 

@@ -7,7 +7,7 @@ import net.mightypork.rcalc.numbers.Fraction;
 /**
  * Interface of an object that can be turned into a fractional value
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public interface IEvaluable {
 

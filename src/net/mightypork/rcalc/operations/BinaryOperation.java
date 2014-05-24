@@ -8,7 +8,7 @@ import net.mightypork.rcalc.numbers.Fraction;
 /**
  * Abstract operation with two operands
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public abstract class BinaryOperation extends Operation {
 

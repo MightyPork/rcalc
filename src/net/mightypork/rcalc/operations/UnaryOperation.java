@@ -8,7 +8,7 @@ import net.mightypork.rcalc.numbers.Fraction;
 /**
  * Abstract unary operator
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public abstract class UnaryOperation extends Operation {
 

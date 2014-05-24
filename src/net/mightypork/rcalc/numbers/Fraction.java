@@ -11,7 +11,7 @@ import net.mightypork.rcalc.TokenList;
 /**
  * A fractional number with methods for basic arithmetics
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class Fraction implements IEvaluableToken {
 

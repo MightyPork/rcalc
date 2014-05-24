@@ -9,7 +9,7 @@ import net.mightypork.rcalc.operations.OperationSubtract;
 /**
  * Subtraction token
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class TokenOperatorSubtract extends TokenBinaryOperator {
 

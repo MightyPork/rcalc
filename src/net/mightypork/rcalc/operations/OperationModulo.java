@@ -8,7 +8,7 @@ import net.mightypork.rcalc.numbers.Fraction;
 /**
  * Modulo
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class OperationModulo extends BinaryOperation {
 

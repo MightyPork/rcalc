@@ -8,7 +8,7 @@ import net.mightypork.rcalc.numbers.Fraction;
 /**
  * Exponentiation
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class OperationPower extends BinaryOperation {
 

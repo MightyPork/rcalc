@@ -7,7 +7,7 @@ import net.mightypork.rcalc.RCalc;
 /**
  * RCalc unit tests
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class Tests implements Runnable {
 

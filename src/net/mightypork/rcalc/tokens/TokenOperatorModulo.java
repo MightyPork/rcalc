@@ -9,7 +9,7 @@ import net.mightypork.rcalc.operations.OperationModulo;
 /**
  * Modulo token
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class TokenOperatorModulo extends TokenBinaryOperator {
 

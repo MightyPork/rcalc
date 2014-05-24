@@ -9,7 +9,7 @@ import net.mightypork.rcalc.operations.OperationPower;
 /**
  * Exponentiation token
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class TokenOperatorPower extends TokenBinaryOperator {
 

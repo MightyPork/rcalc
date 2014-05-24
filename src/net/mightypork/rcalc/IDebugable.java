@@ -4,7 +4,7 @@ package net.mightypork.rcalc;
 /**
  * Interface for classes with optional debug mode
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public interface IDebugable {
 

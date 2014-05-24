@@ -4,7 +4,7 @@ package net.mightypork.rcalc;
 /**
  * Token interface
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public interface IToken {
 	/**

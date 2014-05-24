@@ -9,7 +9,7 @@ import net.mightypork.rcalc.numbers.Fraction;
 /**
  * Abstract operation
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public abstract class Operation implements IEvaluableToken {
 

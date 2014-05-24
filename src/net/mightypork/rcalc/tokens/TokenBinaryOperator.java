@@ -8,7 +8,7 @@ import net.mightypork.rcalc.operations.Operation;
 /**
  * Abstract operation token with two operands
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public abstract class TokenBinaryOperator extends TokenOperator {
 

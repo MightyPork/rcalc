@@ -7,7 +7,7 @@ import net.mightypork.rcalc.IToken;
 /**
  * Interface of an operator token
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public interface IOperatorToken extends IToken {
 

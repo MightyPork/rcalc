@@ -9,7 +9,7 @@ import net.mightypork.rcalc.operations.OperationMultiply;
 /**
  * Multiplication token
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class TokenOperatorMultiply extends TokenBinaryOperator {
 

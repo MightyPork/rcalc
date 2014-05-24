@@ -8,7 +8,7 @@ import net.mightypork.rcalc.TokenList;
 /**
  * Right parenthesis token
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class TokenParenthesisRight implements IToken {
 

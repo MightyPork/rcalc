@@ -4,7 +4,7 @@ package net.mightypork.rcalc;
 /**
  * Error thrown when a syntax error is encountered while parsing an expression
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class ParseError extends RuntimeException {
 

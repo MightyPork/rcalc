@@ -11,7 +11,7 @@ import net.mightypork.rcalc.tokens.*;
 /**
  * Utility for converting an expression from String to a list of tokens
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class Tokenizer implements IDebugable {
 

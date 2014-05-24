@@ -15,7 +15,7 @@ import net.mightypork.rcalc.numbers.Fraction;
 /**
  * Batch calculator (reads input from a file)
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class CalculatorBatch implements Runnable {
 

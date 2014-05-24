@@ -13,7 +13,7 @@ import net.mightypork.rcalc.numbers.Fraction;
 /**
  * Interactive calculator
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class CalculatorInteractive implements Runnable {
 

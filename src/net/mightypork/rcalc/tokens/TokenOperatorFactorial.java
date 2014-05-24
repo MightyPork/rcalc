@@ -9,7 +9,7 @@ import net.mightypork.rcalc.operations.OperationFactorial;
 /**
  * Factorial token
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class TokenOperatorFactorial extends TokenUnaryOperatorLeft {
 

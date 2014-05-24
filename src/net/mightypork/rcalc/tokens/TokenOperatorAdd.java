@@ -9,7 +9,7 @@ import net.mightypork.rcalc.operations.OperationAdd;
 /**
  * Addition token
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class TokenOperatorAdd extends TokenBinaryOperator {
 

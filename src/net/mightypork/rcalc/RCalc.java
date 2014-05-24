@@ -8,7 +8,7 @@ import net.mightypork.rcalc.numbers.Fraction;
  * Rational calculator, expression parser returning fractional results instead
  * of imprecise decimal values.
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class RCalc implements IDebugable {
 

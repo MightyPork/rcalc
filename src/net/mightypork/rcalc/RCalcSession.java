@@ -13,7 +13,7 @@ import net.mightypork.rcalc.numbers.Fraction;
  * Rational Calculator Session - interactive RCalc with possibility to set and
  * use variables.
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class RCalcSession implements IDebugable {
 

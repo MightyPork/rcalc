@@ -7,7 +7,7 @@ import java.io.File;
 /**
  * Application main class
  * 
- * @author Ondrej Hruska
+ * @author Ondřej Hruška (MightyPork)
  */
 public class Main {
 
